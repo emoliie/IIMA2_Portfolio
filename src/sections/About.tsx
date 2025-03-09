@@ -101,14 +101,26 @@ export const AboutSection = () => {
               />
 
               <div className="flex flex-col mx-6 gap-4">
-                <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibol inline-flex items-center justify-center gap-2">
-                  <span>Explore my Github</span>
-                  <GithubIcon className="size-4" />
-                </button>
-                <button className="border border-white/15 text-white h-12 w-full md:w-auto px-6 rounded-xl font-semibol inline-flex items-center justify-center gap-2">
-                  <span>📝</span>
-                  <span>Discover my CV</span>
-                </button>
+                <a
+                  href="https://github.com/emoliie"
+                  className="w-full md:w-auto"
+                >
+                  <button className="bg-white text-gray-950 h-12 w-full  px-6 rounded-xl font-semibol inline-flex items-center justify-center gap-2">
+                    <span>Explore my Github</span>
+                    <GithubIcon className="size-4" />
+                  </button>
+                </a>
+                <a
+                  href="english-cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full md:w-auto"
+                >
+                  <button className="border border-white/15 text-white h-12 w-full  px-6 rounded-xl font-semibol inline-flex items-center justify-center gap-2">
+                    <span>📝</span>
+                    <span>Discover my CV</span>
+                  </button>
+                </a>
               </div>
             </Card>
 
