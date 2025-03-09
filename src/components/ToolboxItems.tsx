@@ -15,7 +15,7 @@ export default function ToolboxItems({
 }) {
   return (
     <div className={twMerge("flex mask-image-x", className)}>
-      <div className={twMerge("flex flex-none py-0.5 gap-6",itemsWrapperClassName)}>
+      <div className={twMerge("flex flex-none py-0.5 gap-6 pr-6",itemsWrapperClassName)}>
         {items.map((item) => (
           <div
             key={item.title}
