@@ -9,7 +9,7 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 export const HeroSection = () => {
   return (
     <div className="py-40 md:py-60 lg:py-80 relative z-0">
-      <div className="absolute inset-0 mask-image-y">
+      <div className="absolute inset-0 mask-image-y -z-10">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -128,7 +128,7 @@ export const HeroSection = () => {
         </HeroOrbit>
       </div>
 
-      <div className="container z-10">
+      <div className="container">
         <div className="flex flex-col items-center">
           <Image
             src={memojiImage}
@@ -155,14 +155,19 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>👋🏻</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          <a href="#projects">
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </button>
+          </a>
+
+          <a href="contact-me">
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+              <span>👋🏻</span>
+              <span className="font-semibold">Let&apos;s Connect</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
