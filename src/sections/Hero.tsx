@@ -150,8 +150,8 @@ export const HeroSection = () => {
             Crafting the Future of Web Innovation
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I'm Emilie, I design and code with a passion for building meaningful
-            and impactful digital experiences. Let&apos;s discuss !
+            I&apos;m Emilie, I design and code with a passion for building
+            meaningful and impactful digital experiences. Let&apos;s discuss !
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
