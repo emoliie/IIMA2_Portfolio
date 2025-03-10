@@ -1,6 +1,8 @@
 import harryPotterLandingPage from "@/assets/images/harry-potter-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import toDoListLandingPage from "@/assets/images/todolist-landing-page.png";
+import wavewatchLandingPage from "@/assets/images/wavewatch-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -15,7 +17,7 @@ const portfolioProjects = [
     functionalities: [
       { title: "Collect Harry Potter's characters cards" },
       { title: "Trading cards with other users" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "User Authentication" },
     ],
     link: "https://github.com/emoliie/IIMA1_Projet-dAxe",
     image: harryPotterLandingPage,
@@ -23,26 +25,28 @@ const portfolioProjects = [
   {
     company: "IIM Digital School",
     year: "2024",
-    title: "Surfing at the 2024 Olympics",
+    title: "Wavewatch : Surfing at the 2024 Olympics",
     functionalities: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Responsive UI for smooth interaction" },
+      { title: "Score database for storage and display" },
+      {
+        title: "Integrated visuals & marketing strategy",
+      },
     ],
     link: "https://github.com/emoliie/IIMA1_projet-transversal",
-    image: lightSaasLandingPage,
+    image: wavewatchLandingPage,
   },
   {
     company: "IIM Digital School",
     year: "2025",
     title: "Typescript To-Do List",
     functionalities: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "User authentication for secure access" },
+      { title: "Task management for organization" },
+      { title: "Retro-inspired design for a unique look" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/emoliie/IIMA2_Projet_ToDoList",
+    image: toDoListLandingPage,
   },
 ];
 
