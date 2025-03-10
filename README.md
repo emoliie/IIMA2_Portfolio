@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio d'Emilie Xu
 
-## Getting Started
+Ce projet est mon portfolio personnel, développé pour présenter mes compétences, mes projets et mon parcours en tant que développeuse web.
 
-First, run the development server:
+## 🚀 Déploiement
+Le portfolio est accessible en ligne à l'adresse suivante :  
+🔗 [Voir le portfolio](https://emilie-portfolio-iota.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📂 Repository
+Le code source est disponible sur GitHub :  
+🔗 [Voir le repository](https://github.com/emoliie/IIMA2_Portfolio)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies utilisées
+- **Front-End** : Next.js, React
+- **Styling** : Tailwind CSS
+- **Déploiement** : Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌 Fonctionnalités
+- Présentation de mon parcours et de mes compétences
+- Affichage de mes projets avec descriptions et liens vers les repositories
+- Section contact pour me joindre facilement
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📥 Installation et Exécution
+Si vous souhaitez exécuter le projet en local, suivez ces étapes :
 
-## Learn More
+1. **Cloner le repository**
+   ```sh
+   git clone https://github.com/emoliie/IIMA2_Portfolio.git
+   cd IIMA2_Portfolio
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Installer les dépendances**
+   ```sh
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Lancer le serveur local**
+   ```sh
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Accéder au site**  
+   Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-## Deploy on Vercel
+## 📄 Licence
+Ce projet est sous licence MIT. Vous êtes libre de le modifier et de le partager en respectant les termes de la licence.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📧 Contact
+Si vous avez des questions ou souhaitez échanger sur mon travail, vous pouvez me contacter via :
+- **Email** : [Ajouter votre email]
+- **LinkedIn** : [Ajouter votre profil LinkedIn]
