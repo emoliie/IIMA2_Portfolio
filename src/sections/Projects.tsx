@@ -72,8 +72,7 @@ export const ProjectsSection = () => {
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div
-                  className="lg
-                pb-16"
+                  className="lg:pb-16"
                 >
                   <div className="bg-gradient-to-r from-red-300 to-purple-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
@@ -103,11 +102,11 @@ export const ProjectsSection = () => {
                     </button>
                   </a>
                 </div>
-                <div className="relativ e">
+                <div className="relative">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-7 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
