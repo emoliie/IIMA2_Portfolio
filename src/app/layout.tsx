@@ -30,7 +30,7 @@ export default function RootLayout({
         className={twMerge(
           poppins.variable,
           calistoga.variable,
-          "bg-gray-900 text-white antialiased font-sans overflow-x-clip"
+          "bg-gray-900 text-white antialiased font-sans overflow-x-hidden"
         )}
       >
         {children}
