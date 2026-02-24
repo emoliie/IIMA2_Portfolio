@@ -2,13 +2,20 @@
 
 import { Lang, translations } from "@/i18n/translations";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Header = ({ lang }: { lang: Lang }) => {
   const t = translations[lang].header;
   const q = lang === "en" ? "?lang=en" : "";
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const pathname = usePathname();
+  const isContactPage = pathname === "/contact-me";
+  const [activeSection, setActiveSection] = useState<string>(
+    isContactPage ? "contact" : "home"
+  );
 
   useEffect(() => {
+    if (isContactPage) return;
+
     const sections = ["projects", "about"];
     const observers: IntersectionObserver[] = [];
 
@@ -37,7 +44,7 @@ export const Header = ({ lang }: { lang: Lang }) => {
     });
 
     return () => observers.forEach((o) => o.disconnect());
-  }, []);
+  }, [isContactPage]);
 
   const navClass = (section: string) =>
     `nav-item ${activeSection === section ? "bg-white/20 text-white" : ""}`;
@@ -56,7 +63,7 @@ export const Header = ({ lang }: { lang: Lang }) => {
         </a>
         <a
           href={`/contact-me${q}`}
-          className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
+          className={`nav-item ${isContactPage ? "bg-white text-gray-900" : "bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"}`}
         >
           {t.contact}
         </a>

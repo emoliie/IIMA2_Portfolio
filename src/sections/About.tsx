@@ -3,18 +3,20 @@
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HtmlIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import PhpIcon from "@/assets/icons/php.svg";
-import NextIcon from "@/assets/icons/next.svg";
-import TailwindIcon from "@/assets/icons/tailwind.svg";
-import TypescriptIcon from "@/assets/icons/typescript.svg";
-import SymfonyIcon from "@/assets/icons/symfony.svg";
-import ScssIcon from "@/assets/icons/scss.svg";
-import SqlIcon from "@/assets/icons/sql.svg";
+import {
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiReact,
+  SiGithub,
+  SiPhp,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiSymfony,
+  SiSass,
+  SiMysql,
+} from "@icons-pack/react-simple-icons";
 import mapImage from "@/assets/images/map.jpeg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
@@ -24,18 +26,18 @@ import { useRef } from "react";
 import { Lang, translations } from "@/i18n/translations";
 
 const toolboxItems = [
-  { title: "Javascript", iconType: JavascriptIcon },
-  { title: "HTML5", iconType: HtmlIcon },
-  { title: "CSS3", iconType: CssIcon },
-  { title: "ReactJS", iconType: ReactIcon },
-  { title: "Github", iconType: GithubIcon },
-  { title: "PHP", iconType: PhpIcon },
-  { title: "NextJS", iconType: NextIcon },
-  { title: "Tailwind", iconType: TailwindIcon },
-  { title: "Typescript", iconType: TypescriptIcon },
-  { title: "Symfony", iconType: SymfonyIcon },
-  { title: "SCSS", iconType: ScssIcon },
-  { title: "SQL", iconType: SqlIcon },
+  { title: "Javascript", iconType: SiJavascript },
+  { title: "HTML5", iconType: SiHtml5 },
+  { title: "CSS3", iconType: SiCss },
+  { title: "ReactJS", iconType: SiReact },
+  { title: "Github", iconType: SiGithub },
+  { title: "PHP", iconType: SiPhp },
+  { title: "NextJS", iconType: SiNextdotjs },
+  { title: "Tailwind", iconType: SiTailwindcss },
+  { title: "Typescript", iconType: SiTypescript },
+  { title: "Symfony", iconType: SiSymfony },
+  { title: "SCSS", iconType: SiSass },
+  { title: "SQL", iconType: SiMysql },
 ];
 
 export const AboutSection = ({ lang }: { lang: Lang }) => {
@@ -65,7 +67,7 @@ export const AboutSection = ({ lang }: { lang: Lang }) => {
                 >
                   <button className="bg-white text-gray-950 h-12 w-full  px-6 rounded-xl font-semibol inline-flex items-center justify-center gap-2">
                     <span>{t.journey.githubBtn}</span>
-                    <GithubIcon className="size-4" />
+                    <SiGithub size={16} color="black" />
                   </button>
                 </a>
                 <a

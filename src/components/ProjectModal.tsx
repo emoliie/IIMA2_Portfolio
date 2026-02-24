@@ -5,6 +5,34 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import {
+  SiPhp,
+  SiSymfony,
+  SiMysql,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiSupabase,
+} from "@icons-pack/react-simple-icons";
+
+const techIconMap: Record<string, React.ElementType> = {
+  PHP: SiPhp,
+  Symfony: SiSymfony,
+  MySQL: SiMysql,
+  HTML: SiHtml5,
+  CSS: SiCss,
+  JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  "Tailwind CSS": SiTailwindcss,
+  SQL: SiMysql,
+  Supabase: SiSupabase,
+};
 
 type Project = {
   title: string;
@@ -115,14 +143,18 @@ export const ProjectModal = ({ project, onClose, labels }: Props) => {
                   {labels.techStack}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80 border border-white/10"
-                    >
-                      {t}
-                    </span>
-                  ))}
+                  {project.tech.map((t) => {
+                    const Icon = techIconMap[t];
+                    return (
+                      <span
+                        key={t}
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80 border border-white/10 inline-flex items-center gap-1.5"
+                      >
+                        {Icon && <Icon size={12} color="white" />}
+                        {t}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
 

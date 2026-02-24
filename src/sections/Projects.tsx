@@ -14,10 +14,10 @@ import { useState } from "react";
 const projectsMeta = [
   {
     company: "IIM Digital School",
-    year: "2024",
-    title: "Harry Potter Cards And Trading",
-    link: "https://github.com/emoliie/IIMA1_Projet-dAxe",
-    image: harryPotterLandingPage,
+    year: "2025",
+    title: "Typescript To-Do List",
+    link: "https://github.com/emoliie/IIMA2_Projet_ToDoList",
+    image: toDoListLandingPage,
   },
   {
     company: "IIM Digital School",
@@ -28,10 +28,10 @@ const projectsMeta = [
   },
   {
     company: "IIM Digital School",
-    year: "2025",
-    title: "Typescript To-Do List",
-    link: "https://github.com/emoliie/IIMA2_Projet_ToDoList",
-    image: toDoListLandingPage,
+    year: "2024",
+    title: "Harry Potter Cards And Trading",
+    link: "https://github.com/emoliie/IIMA1_Projet-dAxe",
+    image: harryPotterLandingPage,
   },
 ];
 
@@ -87,20 +87,11 @@ export const ProjectsSection = ({ lang }: { lang: Lang }) => {
                   <div className="flex flex-col sm:flex-row gap-3 mt-8">
                     <button
                       onClick={() => setSelectedIndex(projectIndex)}
-                      className="bg-white text-gray-950 h-12 w-full sm:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2"
+                      className="bg-white text-gray-950 h-12 w-full px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2"
                     >
                       <span>{t.seeDetails}</span>
+                      <ArrowUpRightIcon className="size-4" />
                     </button>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="border border-white/15 text-white h-12 w-full sm:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2">
-                        <span>{t.viewRepo}</span>
-                        <ArrowUpRightIcon className="size-4" />
-                      </button>
-                    </a>
                   </div>
                 </div>
                 <div className="relative">

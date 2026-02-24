@@ -29,12 +29,12 @@ export const translations = {
       items: [
         {
           description:
-            "A full-stack web application where users can collect and trade Harry Potter character cards. Built during my first year at IIM, it features a card collection system, a peer-to-peer trading mechanism, and secure user authentication.",
-          tech: ["PHP", "Symfony", "MySQL", "HTML", "CSS", "JavaScript"],
+            "A retro-styled to-do list application built entirely in TypeScript. Users can sign in, manage their tasks, and enjoy a unique pixel-art inspired interface. Focuses on type safety and clean architecture.",
+          tech: ["HTML", "TypeScript", "JavaScript", "Tailwind CSS", "Supabase"],
           functionalities: [
-            "Collect Harry Potter's characters cards",
-            "Trading cards with other users",
-            "User Authentication",
+            "User authentication for secure access",
+            "Task management for organization",
+            "Retro-inspired design for a unique look",
           ],
         },
         {
@@ -49,12 +49,12 @@ export const translations = {
         },
         {
           description:
-            "A retro-styled to-do list application built entirely in TypeScript. Users can sign in, manage their tasks, and enjoy a unique pixel-art inspired interface. Focuses on type safety and clean architecture.",
-          tech: ["TypeScript", "React", "Next.js", "Tailwind CSS", "SQL"],
+            "A full-stack web application where users can collect and trade Harry Potter character cards. Built during my first year at IIM, it features a card collection system, a peer-to-peer trading mechanism, and secure user authentication.",
+          tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
           functionalities: [
-            "User authentication for secure access",
-            "Task management for organization",
-            "Retro-inspired design for a unique look",
+            "Collect Harry Potter's characters cards",
+            "Trading cards with other users",
+            "User Authentication",
           ],
         },
       ],
@@ -161,12 +161,12 @@ export const translations = {
       items: [
         {
           description:
-            "Une application web full-stack permettant aux utilisateurs de collecter et d'échanger des cartes de personnages Harry Potter. Réalisée en première année à l'IIM, elle intègre un système de collection, un mécanisme d'échange entre utilisateurs et une authentification sécurisée.",
-          tech: ["PHP", "Symfony", "MySQL", "HTML", "CSS", "JavaScript"],
+            "Une application to-do list au style rétro, développée entièrement en TypeScript. Les utilisateurs peuvent se connecter, gérer leurs tâches et profiter d'une interface inspirée du pixel art. L'accent est mis sur la sécurité des types et une architecture propre.",
+          tech: ["HTML", "TypeScript", "JavaScript", "Tailwind CSS", "Supabase"],
           functionalities: [
-            "Collecter les cartes des personnages de Harry Potter",
-            "Échanger des cartes avec d'autres utilisateurs",
-            "Authentification utilisateur",
+            "Authentification sécurisée des utilisateurs",
+            "Gestion des tâches pour l'organisation",
+            "Design rétro pour un look unique",
           ],
         },
         {
@@ -181,12 +181,12 @@ export const translations = {
         },
         {
           description:
-            "Une application to-do list au style rétro, développée entièrement en TypeScript. Les utilisateurs peuvent se connecter, gérer leurs tâches et profiter d'une interface inspirée du pixel art. L'accent est mis sur la sécurité des types et une architecture propre.",
-          tech: ["TypeScript", "React", "Next.js", "Tailwind CSS", "SQL"],
+            "Une application web full-stack permettant aux utilisateurs de collecter et d'échanger des cartes de personnages Harry Potter. Réalisée en première année à l'IIM, elle intègre un système de collection, un mécanisme d'échange entre utilisateurs et une authentification sécurisée.",
+          tech: ["PHP", "Symfony", "MySQL", "HTML", "CSS", "JavaScript"],
           functionalities: [
-            "Authentification sécurisée des utilisateurs",
-            "Gestion des tâches pour l'organisation",
-            "Design rétro pour un look unique",
+            "Collecter les cartes des personnages de Harry Potter",
+            "Échanger des cartes avec d'autres utilisateurs",
+            "Authentification utilisateur",
           ],
         },
       ],
