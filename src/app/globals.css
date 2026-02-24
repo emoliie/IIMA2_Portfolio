@@ -41,3 +41,7 @@
     @apply lg:max-w-6xl;
   }
 }
+
+html, body {
+  overflow-x: clip;
+}
