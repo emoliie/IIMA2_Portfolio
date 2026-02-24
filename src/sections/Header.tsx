@@ -1,21 +1,64 @@
-export const Header = () => {
+"use client";
+
+import { Lang, translations } from "@/i18n/translations";
+import { useEffect, useState } from "react";
+
+export const Header = ({ lang }: { lang: Lang }) => {
+  const t = translations[lang].header;
+  const q = lang === "en" ? "?lang=en" : "";
+  const [activeSection, setActiveSection] = useState<string>("home");
+
+  useEffect(() => {
+    const sections = ["projects", "about"];
+    const observers: IntersectionObserver[] = [];
+
+    const homeObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setActiveSection("home");
+      },
+      { threshold: 0.3 }
+    );
+
+    const heroEl = document.querySelector(".py-40, .py-60, .py-80");
+    if (heroEl) homeObserver.observe(heroEl);
+    observers.push(homeObserver);
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  const navClass = (section: string) =>
+    `nav-item ${activeSection === section ? "bg-white/20 text-white" : ""}`;
+
   return (
     <div className="flex justify-center items-center fixed top-3 w-screen z-10">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur ">
-        <a href="/" className="nav-item">
-          Home
+        <a href={`/${q}`} className={navClass("home")}>
+          {t.home}
         </a>
-        <a href="/#projects" className="nav-item">
-          Projects
+        <a href={`/${q}#projects`} className={navClass("projects")}>
+          {t.projects}
         </a>
-        <a href="/#about" className="nav-item">
-          About
+        <a href={`/${q}#about`} className={navClass("about")}>
+          {t.about}
         </a>
         <a
-          href="contact-me"
+          href={`/contact-me${q}`}
           className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
         >
-          Contact
+          {t.contact}
         </a>
       </nav>
     </div>

@@ -1,7 +1,10 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { Lang, translations } from "@/i18n/translations";
 
-export const ContactSection = () => {
+export const ContactSection = ({ lang }: { lang: Lang }) => {
+  const t = translations[lang].contact;
+
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container">
@@ -12,18 +15,13 @@ export const ContactSection = () => {
           ></div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="font-serif text-2xl md:text-3xl">
-                Let’s Connect & Create Together
-              </h2>
-              <p className="text-sm md:text-base mt-2">
-                Have a project, question, or just want to chat? Feel free to
-                reach out—I’d love to hear from you!
-              </p>
+              <h2 className="font-serif text-2xl md:text-3xl">{t.title}</h2>
+              <p className="text-sm md:text-base mt-2">{t.description}</p>
             </div>
             <div>
-              <a href="contact-me">
+              <a href={`contact-me?lang=${lang}`}>
                 <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                  <span className="font-semibold">Contact Me</span>
+                  <span className="font-semibold">{t.btn}</span>
                   <ArrowUpRightIcon className="size-4" />
                 </button>
               </a>

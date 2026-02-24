@@ -5,8 +5,12 @@ import grainImage from "@/assets/images/grain.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { Lang, translations } from "@/i18n/translations";
 
-export const HeroSection = () => {
+export const HeroSection = ({ lang }: { lang: Lang }) => {
+  const t = translations[lang].hero;
+  const langParam = `?lang=${lang}`;
+
   return (
     <div className="py-40 md:py-60 lg:py-80 relative z-0">
       <div className="absolute inset-0 mask-image-y -z-10">
@@ -133,39 +137,36 @@ export const HeroSection = () => {
           <Image
             src={memojiImage}
             className="size-[100px]"
-            alt="Person on her laptop"
+            alt={t.imageAlt}
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
-            <div className="text-sm font-medium">
-              Available for new projects
-            </div>
+            <div className="text-sm font-medium">{t.available}</div>
           </div>
         </div>
 
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Crafting the Future of Web Innovation
+            {t.title}
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I&apos;m Emilie, I design and code with a passion for building
-            meaningful and impactful digital experiences. Let&apos;s discuss !
+            {t.description}
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <a href="#projects">
+          <a href={`#projects`}>
             <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-              <span className="font-semibold">Explore My Work</span>
+              <span className="font-semibold">{t.exploreWork}</span>
               <ArrowDown className="size-4" />
             </button>
           </a>
 
-          <a href="contact-me">
+          <a href={`contact-me${langParam}`}>
             <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
               <span>👋🏻</span>
-              <span className="font-semibold">Let&apos;s Connect</span>
+              <span className="font-semibold">{t.letsConnect}</span>
             </button>
           </a>
         </div>
